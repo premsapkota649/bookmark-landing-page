@@ -75,11 +75,9 @@
 }
 
 .overlay{
-    background-color: $verydarkB;
+    background-color: $verydarkB-alfa;
     position: absolute;
     width: 100vw;
     height: 100vh;
-
-    
-        
+    animation: fade-in 300ms ease-in-out forwards; 
 }
