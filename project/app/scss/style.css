@@ -11,8 +11,14 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1.125rem;
+  font-weight: 400;
   line-height: 1.3;
   font-family: "Rubik", sans-serif;
+  color: hsl(229, 8%, 60%);
+}
+
+a, :hover, :visited {
+  text-decoration: none;
 }
 
 .flex {
@@ -27,10 +33,107 @@ body {
 .flex-ai-c {
   align-content: center;
 }
+.flex-cl {
+  flex-direction: column;
+}
 
+button, .btn {
+  font-weight: 500;
+  padding: 0.75rem 2.125rem;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  color: hsl(255, 100%, 100%);
+  transition: color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+button__red, .btn__red {
+  background-color: hsl(0, 94%, 66%);
+}
+button__red:hover, .btn__red:hover {
+  padding: 0.625rem 2rem;
+  color: hsl(0, 94%, 66%);
+  border: 2px solid hsl(0, 94%, 66%);
+  background-color: hsl(255, 100%, 100%);
+}
+button__blue, .btn__blue {
+  background-color: hsl(231, 69%, 60%);
+}
+button__blue:hover, .btn__blue:hover {
+  padding: 0.625rem 2rem;
+  color: hsl(231, 69%, 60%);
+  border: hsl(231, 69%, 60%);
+  background-color: hsl(255, 100%, 100%);
+}
+button__neutral, .btn__neutral {
+  background-color: hsl(229, 8%, 60%);
+}
+button__neutral:hover, .btn__neutral:hover {
+  padding: 0.625rem 2rem;
+  color: hsl(229, 8%, 60%);
+  border: hsl(229, 8%, 60%);
+  background-color: hsl(255, 100%, 100%);
+}
+
+@media (max-width: 56.1875em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.header {
+  transition: background-color 100ms ease-in-out;
+}
+.header nav {
+  padding: 2.5rem 2rem;
+}
+.header__logo img {
+  width: 9.375rem;
+  height: 1.75rem;
+}
 .header__menu > span {
   display: block;
-  width: 1.25rem;
-  height: 2px;
+  width: 2.1125rem;
+  height: 3px;
   background-color: hsl(229, 31%, 21%);
+  transition: all 300ms ease-in-out;
+  transform-origin: 5px 1px;
+}
+.header__menu > span:not(:last-child) {
+  margin-bottom: 5px;
+}
+.header__menu.open > span:first-child {
+  background-color: hsl(255, 100%, 100%);
+  transform: rotate(45deg);
+}
+.header__menu.open > span:nth-child(2) {
+  opacity: 0;
+}
+.header__menu.open > span:last-child {
+  background-color: hsl(255, 100%, 100%);
+  transform: rotate(-45deg);
+}
+.header__links a {
+  font-size: 0.875rem;
+  color: hsl(229, 31%, 21%);
+  transition: color 200ms ease-in-out;
+}
+.header__links a:not(:last-child) {
+  margin-right: 2.8125rem;
+}
+.header__links a:hover:not(:last-child) {
+  color: hsl(0, 94%, 66%);
+}
+
+.overlay {
+  background-color: hsl(229, 31%, 21%);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
 }/*# sourceMappingURL=style.css.map */

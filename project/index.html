@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/favicon-32x32" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -11,19 +11,31 @@
   <title>Bookmark landing page</title>
 </head>
 <body>
-  <header class="header">
-    <nav class="flex flex-jc-sb">
-      <a href="/" class="header__logo">
-        <img src="images/logo-bookmark.svg" alt="bookmark">
-      </a>
+  <header class="header" id="header">
+    
 
-      <a href="#" class="header__menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-    </nav>
+      <nav class="flex flex-jc-sb flex-ai-c">
+        <a href="/" class="header__logo">
+          <img src="images/logo-bookmark.svg" alt="bookmark" class="logo_image">
+        </a>
+        
+        <div class="header__links">
+          <a href="#" class="hide-for-mobile">FEATURES</a>
+          <a href="#" class="hide-for-mobile">PRICING</a>
+          <a href="#" class="hide-for-mobile">CONTACT</a>
+          <button class="btn btn__red hide-for-mobile">LOGIN</button>
+        </div>
+        
+        <a href="#" id="btnHamburger" class="header__menu hide-for-desktop">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        
+      </nav>
+    
   </header>
+  
 
   <script src="app/js/script.js"></script>
 </body>
